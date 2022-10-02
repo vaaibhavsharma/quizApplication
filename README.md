@@ -7,14 +7,16 @@
 ![Django](https://img.shields.io/badge/Django-3.2.15-blue?style=flat-square&logo=django)
 [![GitHub license](https://img.shields.io/github/license/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/blob/main/LICENSE?style=flat-square)
 
-Django Based Quiz Application having 
+Django Based Quiz Application having
 
 - Authentication - user login/Signup with Google email Verification (for organizations) to avoid spam
 - Tracking - Tracking every user Inputs with IPAddress for better Judgements
-- Custom Error Messages - yes with exclusive gali support 🥲
+- Custom Error Messages - Yes, Different slangs supported
 - All Basic Features Of Quiz APP
+-
 
-## Running Locally 
+## Running Locally
+
 - Basic Requirement - Python 3.8+
 
 ### First Steps
@@ -27,11 +29,13 @@ python3 -m venv env
 pip install -r requirements.txt
 ```
 
-###  Environment Variables
+### Environment Variables
+
 Make file .env inside simpleQuiz2 with following content
+
 ```shell
 DEBUG=True
-SECRET_KEY= #Your Django Project Secret Key 
+SECRET_KEY= #Your Django Project Secret Key
 RECAPTCHA_PUBLIC_KEY= #RECAPTCHA PUBLIC KEY (GOOGLE)
 RECAPTCHA_PRIVATE_KEY= #RECAPTCHA PRIVATE KEY (GOOGLE)
 ```
@@ -64,9 +68,11 @@ The Project Will now be up and running locally at http://127.0.0.1:8080/
    ```
    git push origin <new_branch_name>
    ```
+
 5. Make a pull request on GitHub.
 
 ## Screenshots
+
 ![Front Page](/gitassets/frontPage.jpeg "LeaderBoard Page")
 ![Leaderboard](/gitassets/leaderboardPage.png "LeaderBoard Page")
 ![Questions Page](/gitassets/questionPage.png "Questions Page")
