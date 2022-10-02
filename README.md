@@ -1,4 +1,10 @@
 # Quiz Application
+![issues](https://img.shields.io/github/issues/vaaibhavsharma/quizApplication)
+[![GitHub forks](https://img.shields.io/github/forks/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/network)
+[![GitHub stars](https://img.shields.io/github/stars/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/stargazers)
+![Python](https://img.shields.io/badge/python-v3.8+-blue.svg)
+![Django](https://img.shields.io/badge/Django-3.2.12-blue)
+[![GitHub license](https://img.shields.io/github/license/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/blob/main/LICENSE)
 
 Django Based Quiz Application having 
 
