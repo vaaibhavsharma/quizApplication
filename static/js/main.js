@@ -13,6 +13,3 @@ const container = document.querySelector('.fireworkss')
 const fireworks = new Fireworks(container, { /* options */ })
 
 fireworks.start()
-
-console.log("Hello")
-

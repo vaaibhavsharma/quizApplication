@@ -60,7 +60,7 @@ The Project Will now be up and running locally at http://127.0.0.1:8080/
 5. Make a pull request on GitHub.
 
 ## Screenshots
-
+![Front Page](/gitassets/frontPage.jpeg "LeaderBoard Page")
 ![Leaderboard](/gitassets/leaderboardPage.png "LeaderBoard Page")
 ![Questions Page](/gitassets/questionPage.png "Questions Page")
 ![Custom Error Messages](/gitassets/customError.png "Questions Page")
