@@ -2,7 +2,7 @@ asgiref==3.5.0
 cachetools==5.0.0
 certifi==2021.10.8
 charset-normalizer==2.0.12
-Django==3.2.12
+Django==3.2.15
 django-crispy-forms==1.14.0
 django-environ==0.4.5
 django-recaptcha==2.0.6
