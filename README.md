@@ -2,7 +2,7 @@
 
 Django Based Quiz Application having 
 
-- Authentication - user login/Signup with Google Authentication to avoid spam
+- Authentication - user login/Signup with Google email Verifaction (for organizations) to avoid spam
 - Tracking - Tracking every user Inputs with IPAddress for better Judgements
 - Custom Error Messages - yes with exclusive gali support 🥲
 - All Basic Features Of Quiz APP
