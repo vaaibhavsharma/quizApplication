@@ -1,4 +1,5 @@
-# Quiz Application
+<p align="center"><img src="gitassets/logo.png"></img> </p>
+
 ![issues](https://img.shields.io/github/issues/vaaibhavsharma/quizApplication?style=flat-square)
 [![GitHub forks](https://img.shields.io/github/forks/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/network?style=flat-square)
 [![GitHub stars](https://img.shields.io/github/stars/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/stargazers?style=flat-square)
