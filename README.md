@@ -66,3 +66,7 @@ The Project Will now be up and running locally at http://127.0.0.1:8080/
 ![Custom Error Messages](/gitassets/customError.png "Questions Page")
 ![Custom Error Messages 2](/gitassets/customError2.png "Questions Page")
 ![Hint](/gitassets/customHint.png "Hint")
+
+## License
+
+Distributed under the MIT License. See [LICENSE](/LICENSE) for more information.
