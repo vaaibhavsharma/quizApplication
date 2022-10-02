@@ -1,0 +1,28 @@
+.signup{
+    margin: auto;
+    max-width: 70vw;
+}
+.signup ul{
+    margin: 1em 0 0 1.5em;
+}
+.signup_button {
+    display: block;
+    width: 10em;
+    height: 50px;
+    text-decoration: none;
+    border-radius: 25px;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    background-color: #013e00;
+    border: #1a84c2;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1rem 0;
+
+}
+.signup_button:hover{
+    background-color: #013e00;
+    cursor: pointer;
+}
+

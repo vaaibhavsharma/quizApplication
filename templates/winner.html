@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@latest/dist/fireworks.js"></script>
+    <div class="fireworkss" style="position: fixed; width: 100vw; height: 100vh; overflow: hidden"></div>
+        <div class="container winnerNice" >
+            <div class="jumbotron text-center" >
+                <h1 class="mb-5"><span class="text-primary">CONGRATULATIONS,</span> {{ request.user| upper }}!</h1>
+                <h4>You Have Succesfully Completed  <strong class="text-primary">HACHE </strong><span class="text-primary"> 2022</span></h4>
+            </div>
+        </div>
+
+{% endblock content %}

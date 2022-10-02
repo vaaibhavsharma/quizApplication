@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+
+      <link rel="stylesheet" href="{% static 'css/quiz.css' %}">
+{% endblock style %}
+{% block content %}
+
+<div class="grid">
+  <div class="story">
+    <div id="response" class="mt-1" style="text-align: center;"></div>
+    <h2 class="text" style="text-align:center">Question - {{ question.questionNum }}</h2>
+      <p class="question-p">{{ question.text }}</p>
+  </div>
+    {% if question.asset != null %}
+                  <h5 class="assets-ass"><a target="_blank" href="{{ question.asset }}">Assets</a></h5>
+    {% endif %}
+    
+    {% if question.questionNum == 7 %}
+    <!-- https://web.expasy.org/translate/ -->
+    {% endif %}
+    {% if question.questionNum == 9 %}
+    <!-- http://bit.ly/this-is-an-image-mp3 -->
+    {% endif %}
+    {% if question.questionNum == 13 %}
+    <!-- https://bit.ly/meme-image-jpg-1 -->
+    {% endif %}
+    {% if question.questionNum == 14 %}
+    <!-- https://bit.ly/mp3-leet -->
+    {% endif %}
+    
+    {% if question.questionNum == 18 %}
+    <!-- “This Is The World Now. Logged On, Plugged In, All The Time.” -->
+    {% endif %}
+
+  <div class="answer">
+      <div class="form-group">
+    <label for="exampleInputEmail1">Your Answer</label>
+    <input type="text" class="form-control answetInput" id="temp-ans" placeholder="Enter Your Answer Here..." aria-label="Enter Your Answer Here..." aria-describedby="button-addon2">
+    <br>
+          <div class="button-group">
+            <button  id="button-addon2" type="button" class="btn btn-primary check">Check</button>
+              {% if hint != null %}
+              <button  id="buttonHint" type="button" class="btn btn-primary">Hint!!</button>
+              {% endif %}
+
+          </div>
+  </div>
+    {{ hint|json_script:"hint" }}
+
+
+    <form id="answer-form" action="{% url 'quiz' %}" method="POST" style="display: none;">{% csrf_token %}
+        {{ form }}
+    </form>
+  </div>
+</div>
+      <div class="container text-center p-text">
+        <p class="mb-0 py-2">&copy; 2022 ACM-JUIT </p>
+      </div>
+{% endblock content %}
+{% block script %}
+
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock script %}

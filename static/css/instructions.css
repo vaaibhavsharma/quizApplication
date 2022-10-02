@@ -1,0 +1,27 @@
+.login_button {
+    display: block;
+    width: 50%;
+    text-decoration: none;
+    border-radius: 25px;
+    outline: none;
+    padding: 10px;
+    text-align: center;
+    background-color: skyblue;
+    border: #1a84c2;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: auto;
+}
+.login_button:hover{
+    background-color: #1a84c2;
+    cursor: pointer;
+}
+.list{
+    line-height: 2em;
+    font-size: large;
+}
+
+.container {
+    width: 80% !important;
+    margin-bottom: 60px;
+}

@@ -1,0 +1,13 @@
+thead th{
+    position: sticky;
+    top: -1px;
+}
+.tableContainer{
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 780px) {
+    #myChartOK {
+        display: none !important;
+    }
+}

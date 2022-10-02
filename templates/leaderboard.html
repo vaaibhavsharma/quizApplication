@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<link rel="stylesheet" href="{% static 'css/leaderboard.css' %}">
+{% endblock style %}
+{% block content %}
+    <div class="jumbotron bg-transparent mb-0 pt-3 radius-0">
+        <div class="container">
+            <div class="row" id="myChartOK">
+                <div class="col-xl-12">
+                    <div class="row justify-content-center my-5">
+                        <div class="col-xl-10">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5  justify-content-center">
+                <div class="col-xl-10 tableContainer">
+                    <table class="table table-hover table-striped">
+                        <thead class="thead-dark hackerFont" >
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th># Challenges Solved</th>
+                                <th>Total Time Taken</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody id='table'>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HELLO CONTACT @VAIBHAV FOR ANSWERS -->
+{% endblock content %}
+{% block script %}
+{% autoescape off %}
+{{ data|json_script:"board-data" }}
+    <script src="{% static 'js/leaderboard.js' %}"></script>
+{% endautoescape %}
+{% endblock script %}

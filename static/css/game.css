@@ -1,0 +1,110 @@
+
+.stage {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.score-div{
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  justify-content: flex-start;
+  justify-items: center;
+  max-width: 20%;
+  padding: 5px;
+}
+
+/*================================================
+
+Tiles
+
+================================================*/
+
+.tile {
+  background: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  transition-property:
+    background,
+    box-shadow,
+    opacity,
+    transform
+  ;
+  transform: translateZ(0);
+  transition-duration: 3000ms;
+}
+
+.tile:before {
+  bottom: 0;
+  content: '';
+  height: 0;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  transition: opacity 300ms;
+}
+
+.tile.path:before {
+  opacity: 1;
+}
+
+.tile.up:before {
+  border-bottom: 4px inset rgba(255, 255, 255, 0.15);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.tile.down:before {
+  border-top: 4px inset rgba(255, 255, 255, 0.15);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.tile.left:before {
+  border-right: 4px inset rgba(255, 255, 255, 0.15);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.tile.right:before {
+  border-left: 4px inset rgba(255, 255, 255, 0.15);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+@media (max-width: 900px), (max-height: 900px) {
+  .tile.up:before,
+  .tile.down:before,
+  .tile.left:before,
+  .tile.right:before {
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 500px), (max-height: 500px) {
+  .tile.up:before,
+  .tile.down:before,
+  .tile.left:before,
+  .tile.right:before {
+    border-width: 2px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+    .game {
+        display: none !important;
+    }
+}
+.tile.pressed {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  transition-duration: 0ms;
+}

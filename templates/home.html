@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+  
+{% endblock style %}
+{% block content %}
+<div class="row">
+  <div class="col-md-5">
+{#    <h1 class="heading mb-3"><span>HACHE</span></h1>#}
+    <h3 class="heading mb-3 term">root@hache:~$ </h3>
+
+      <div class="countdown">
+  <div id="countdown">
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+  <div id="content" class="emoji">
+    <span>🥳</span>
+    <span>🎉</span>
+    <span>🎂</span>
+  </div>
+</div>
+  </div>
+  <div class="col-md-7 text-center">
+    <img class="img-responsive home-image" src="{% static 'images/logo.png' %}" alt="bulb">
+  </div>
+</div>
+
+{#    <div class="container home-sec-2">#}
+{#  <h2>Our Sponsors</h2>#}
+{#   <div class="sponsors">#}
+{#	<div class="sponsors-slide">#}
+{#        <img src="{% static 'images/echo3D-Logo.png' %}" class="sponsor-img-1" height="100" width="250" alt="" />#}
+{#        <img src="{% static 'images/interview-cake-logo.jpg' %}" class="sponsor-img-2" height="100" width="250" alt="" />#}
+{#        <img src="{% static 'images/xyz-logo.png' %}" height="100" class="sponsor-img-3" width="250" alt="" />#}
+{##}
+{#	</div>#}
+{#</div>#}
+{##}
+{#</div>#}
+      <footer>
+    <!-- Copyrights -->
+      <div class="container text-center">
+        <p class="mb-0 py-2 footer-p">&copy; 2022 ACM-JUIT </p>
+      </div>
+  </footer>
+{% endblock content %}
+{% block script %}
+  <script src="{% static 'js/main.js' %}"></script>
+    <script>
+
+
+    var countDownDate = new Date("March 13, 2022 22:00:00").getTime();
+
+    var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+  document.getElementById("hours").innerText =  Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  document.getElementById("minutes").innerText  = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+  // If the count down is over, write some text
+}, 1000);
+
+
+
+</script>
+{% endblock script %}
