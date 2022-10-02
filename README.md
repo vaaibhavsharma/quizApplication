@@ -1,4 +1,4 @@
-<p align="center"><img src="gitassets/logo.png"></img> </p>
+<p align="center"><img width="1000px" src="gitassets/logo.png"></img> </p>
 
 ![issues](https://img.shields.io/github/issues/vaaibhavsharma/quizApplication?style=flat-square)
 [![GitHub forks](https://img.shields.io/github/forks/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/network?style=flat-square)
