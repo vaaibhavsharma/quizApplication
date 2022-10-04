@@ -1,4 +1,4 @@
-<p align="center"><img width="1000px" src="gitassets/logo.png"></img> </p>
+![QuizzApp](/gitassets/logo.png)
 
 ![issues](https://img.shields.io/github/issues/vaaibhavsharma/quizApplication?style=flat-square)
 [![GitHub forks](https://img.shields.io/github/forks/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/network?style=flat-square)
@@ -7,17 +7,16 @@
 ![Django](https://img.shields.io/badge/Django-3.2.15-blue?style=flat-square&logo=django)
 [![GitHub license](https://img.shields.io/github/license/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/blob/main/LICENSE?style=flat-square)
 
-Django Based Quiz Application having
+Quizzapp is focused on:
 
-- Authentication - user login/Signup with Google email Verification (for organizations) to avoid spam
-- Tracking - Tracking every user Inputs with IPAddress for better Judgements
-- Custom Error Messages - Yes, Different slangs supported
-- All Basic Features Of Quiz APP
--
+- Authentication - User login/signup with Gmail verification (for organizations) to avoid spam mail
+- Tracking - Tracking users with their IP address for identification
+- Custom Error Messages - Feel free to customise the wording of quiz errors
+- Versatility - All the basic features of a quiz app
 
 ## Running Locally
 
-- Basic Requirement - Python 3.8+
+- You should have Python 3.8 or higher installed.
 
 ### First Steps
 
@@ -33,11 +32,11 @@ pip install -r requirements.txt
 
 Make file .env inside simpleQuiz2 with following content
 
-```shell
+```sh
 DEBUG=True
-SECRET_KEY= #Your Django Project Secret Key
-RECAPTCHA_PUBLIC_KEY= #RECAPTCHA PUBLIC KEY (GOOGLE)
-RECAPTCHA_PRIVATE_KEY= #RECAPTCHA PRIVATE KEY (GOOGLE)
+SECRET_KEY= # Put your Django project secret key here - keep it secret!
+RECAPTCHA_PUBLIC_KEY= # Add your reCAPTCHA site key here
+RECAPTCHA_PRIVATE_KEY= # Add your reCAPTCHA private key here - keep it secret too!
 ```
 
 ### Django Configurations
@@ -48,24 +47,24 @@ python manage.py migrate
 python manage.py runserver 8080
 ```
 
-The Project Will now be up and running locally at http://127.0.0.1:8080/
+Your local instance will now be up and running at http://127.0.0.1:8080/
 
 ## Make Your First Contribution
 
 1. **star this repository** ⭐, and fork it
-   ```
+   ```sh
    git clone https://github.com/<your_account>/quizApplication.git
    ```
 2. Create a new branch and switch to it.
 
-   ```
+   ```sh
    git checkout -b <new_branch_name>
    ```
 
 3. Make changes to the code on that branch and commit.
 4. Push the commit to GitHub.
 
-   ```
+   ```sh
    git push origin <new_branch_name>
    ```
 
@@ -73,12 +72,12 @@ The Project Will now be up and running locally at http://127.0.0.1:8080/
 
 ## Screenshots
 
-![Front Page](/gitassets/frontPage.jpeg "LeaderBoard Page")
-![Leaderboard](/gitassets/leaderboardPage.png "LeaderBoard Page")
-![Questions Page](/gitassets/questionPage.png "Questions Page")
-![Custom Error Messages](/gitassets/customError.png "Questions Page")
-![Custom Error Messages 2](/gitassets/customError2.png "Questions Page")
-![Hint](/gitassets/customHint.png "Hint")
+![Front Page](/gitassets/frontPage.jpeg)
+![Leaderboard](/gitassets/leaderboardPage.png)
+![Questions Page](/gitassets/questionPage.png
+![Custom Error Messages](/gitassets/customError.png)
+![Custom Error Messages 2](/gitassets/customError2.png)
+![Hint](/gitassets/customHint.png)
 
 ## License
 
