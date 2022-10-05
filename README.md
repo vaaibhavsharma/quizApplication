@@ -37,6 +37,11 @@ DEBUG=True
 SECRET_KEY= # Put your Django project secret key here - keep it secret!
 RECAPTCHA_PUBLIC_KEY= # Add your reCAPTCHA site key here
 RECAPTCHA_PRIVATE_KEY= # Add your reCAPTCHA private key here - keep it secret too!
+environment= (prod for production and dev for developement)
+# Still in work (for amazon rds)
+DB_NAME=
+HOST=
+PASSWORD=
 ```
 
 ### Django Configurations
