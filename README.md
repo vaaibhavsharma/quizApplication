@@ -1,4 +1,4 @@
-![QuizzApp](/gitassets/logo.png)
+<p align='center'><img src="/gitassets/logo.png"></p>
 
 ![issues](https://img.shields.io/github/issues/vaaibhavsharma/quizApplication?style=flat-square)
 [![GitHub forks](https://img.shields.io/github/forks/vaaibhavsharma/quizApplication)](https://github.com/vaaibhavsharma/quizApplication/network?style=flat-square)
