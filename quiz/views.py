@@ -60,6 +60,8 @@ requestMessages = [
 @login_required
 def answerView(request):
     profile=request.user.profile
+    
+    
     if profile.verifed == False:
         return redirect(reverse_lazy('onboarding'))
     if datetime.now(tz=IST) < starttime:
@@ -69,6 +71,7 @@ def answerView(request):
     else:
         old_id = profile.ques_id
         print()
+     
         if request.is_ajax() and request.method=="POST":
             form=AnswerForm(request.POST)
             if form.is_valid():
@@ -111,6 +114,7 @@ def answerView(request):
                         return JsonResponse(data)
                     else:
                         actualAnswer=getObj(profile).answer
+                        
                         if  tempAnswer.lower() == actualAnswer.lower():
                             profile.ques_id+=1
                             profile.correct+=1
@@ -118,6 +122,7 @@ def answerView(request):
                             profile.data+='<'+str(datetime.now(tz=IST).isoformat())+','+str(profile.score)+'>'
                             profile.lastQuestionTime = datetime.now(tz=IST)
                             profile.save()
+                        
                         winner=checkForWin(profile)
                         if winner:
                             data={'winner':winner}
@@ -216,7 +221,6 @@ def firstQuestion(request):
 
 
 
-
 @login_required
 def profile(request):
     if request.method == 'POST':
@@ -235,7 +239,26 @@ def profile(request):
         return render(request, 'profile.html', {'user_form': user_form, 'verifed': True})
 
 
-
+@login_required
+def timeOut_check(request):
+    profile = request.user.profile
+    if request.method=='POST':
+        print(request.POST['interval'])
+        x =request.POST['interval']
+        if int(x) == 0:
+            profile.ques_id+=1
+            print(profile.ques_id)
+            print(request.POST['interval'])
+            
+            #profile.ques_id += 1
+            
+            
+            profile.save()
+            profileObj=getObj(profile)
+            question={'text':profileObj.question}
+            print(question)
+        return redirect(reverse_lazy('quiz'))
+        
 class ChangePasswordView(PasswordChangeView):
     template_name = 'passwordchange.html'
     success_url = reverse_lazy('profile')

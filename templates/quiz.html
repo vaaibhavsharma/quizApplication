@@ -7,11 +7,18 @@
 {% block content %}
 
 <div class="grid">
+  <div class="progress">
+    <div class="timer"></div>
+  </div>
+  {{interval|json_script:"interval" }}
   <div class="story">
+
     <div id="response" class="mt-1" style="text-align: center;"></div>
     <h2 class="text" style="text-align:center">Question - {{ question.questionNum }}</h2>
+    
       <p class="question-p">{{ question.text }}</p>
   </div>
+
     {% if question.asset != null %}
                   <h5 class="assets-ass"><a target="_blank" href="{{ question.asset }}">Assets</a></h5>
     {% endif %}
@@ -32,7 +39,7 @@
     {% if question.questionNum == 18 %}
     <!-- “This Is The World Now. Logged On, Plugged In, All The Time.” -->
     {% endif %}
-
+ 
   <div class="answer">
       <div class="form-group">
     <label for="exampleInputEmail1">Your Answer</label>
@@ -59,6 +66,5 @@
       </div>
 {% endblock content %}
 {% block script %}
-
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock script %}
