@@ -10,4 +10,4 @@ COPY . /app/
 WORKDIR /app
 
 # Allows docker to cache installed dependencies between builds
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
