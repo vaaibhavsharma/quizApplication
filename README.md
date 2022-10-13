@@ -54,6 +54,14 @@ python manage.py runserver 8080
 
 Your local instance will now be up and running at http://127.0.0.1:8080/
 
+### Optional: Docker
+
+If you'd like to self-host this project using [Docker](https://www.docker.com) and [Docker Compose](https://docs.docker.com/get-started/08_using_compose/), run the following command:
+```bash
+docker-compose up
+```
+The configuration files are already included with the repository.
+
 ## Make Your First Contribution
 
 1. **star this repository** ⭐, and fork it
