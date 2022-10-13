@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: bash -c "python manage.py makemigrations userProfile quiz && python manage.py migrate && python manage.py runserver 8000"
+    container_name: quiz_application
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
