@@ -9,5 +9,7 @@ ENV PYTHONUNBUFFERED 1
 COPY . /app/
 WORKDIR /app
 
+EXPOSE 8080
+
 # Allows docker to cache installed dependencies between builds
 RUN pip install --no-cache-dir -r requirements.txt
