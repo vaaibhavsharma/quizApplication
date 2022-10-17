@@ -1,5 +1,11 @@
 const answerField = document.getElementById("temp-ans")
 const hint = document.getElementById("hint").textContent
+const timer = document.querySelector(".timer");
+
+//
+var URLL = "{%url 'interval' %}"
+var interval =10;
+var xx=12
 
 try {
     document.getElementById('buttonHint').addEventListener('click', ()=>{
@@ -102,14 +108,29 @@ window.location.replace(response.errorM);
         error: function(response){
             console.log(response)
             iziToast.error({
-                        position: 'topRight',
+                        pos0ition: 'topRight',
                         message: "Error!",
             });
         }
     });
 }
 
-
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
 
 function random(num) {
   return Math.floor(Math.random()*num)
@@ -151,5 +172,51 @@ function deleteballons(){
   }
 }
 
+function countDownTimer(time){
+  
+    //var data = {'interval':interval,"X-CSRFToken":csrftoken}
+  var URL = "{% url 'timeOut_check' %}"
+    let interval =10;
+    var countdown = setInterval(()=>{
+        time--;
+        let timerwidth = time/10*100;
+        if(time>0){
+            $('.timer').animate({
+                width:timerwidth+"vh"
+            })
+            //timer.style.width = timerwidth+"vh"
 
-
+        }else{
+            clearInterval(countdown);
+            timer.style.width = "0vh"
+            $.post('timeOut_check/',{
+                'interval':0, 
+                'csrfmiddlewaretoken':csrftoken
+              },)
+              setTimeout(()=>location.reload(),0)
+        }
+  
+    },time*100 )
+    /*
+    $.ajax({
+       
+        type:"POST",
+        url: 'timeOut_check/',
+    
+        data:{
+          'interval': interval, 
+          'csrfmiddlewaretoken':csrftoken
+        } ,
+        
+        success: function (response) {
+            if (response.result=='ok'){
+                alert("response.message")
+            }else{
+                alert("Failed")
+            }
+         }
+         
+    })*/
+  
+ }
+countDownTimer(interval)

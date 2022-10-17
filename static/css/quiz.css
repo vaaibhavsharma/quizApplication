@@ -2,10 +2,24 @@
     max-width: 100vw;
     height: calc(100vh - 11em);
     padding-inline: 8em;
+   
 }
 
 .question-p {
     font-size: 110%;
+}
+.progress{
+    width: 100vh;
+    height:8px;
+    background: gray;
+    position:relative
+
+}
+.timer{
+    background: green;
+  position: absolute;
+  width: 100vh;
+  height:8px;
 }
 .story{
     max-width: inherit;

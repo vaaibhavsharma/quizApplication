@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from quiz.views import answerView, onboardingView, concludeView, profile, ChangePasswordView, firstQuestion
+from quiz.views import answerView, onboardingView, concludeView, profile, ChangePasswordView, firstQuestion,timeOut_check
 from userProfile.views import signUpView, winnerView,leaderboardView
 from django.contrib.auth.views import LoginView,LogoutView
 from django.conf import settings
@@ -24,4 +24,5 @@ urlpatterns = [
     path('onboarding/', onboardingView, name='onboarding'),
     path('quiz/level2/', firstQuestion, name='firstQuestion'),
     path('password-change/', ChangePasswordView.as_view(), name='password_change'),
+    path('quiz/timeOut_check/', timeOut_check, name="timeOut_check")
 ]
